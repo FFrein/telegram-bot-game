@@ -2,7 +2,7 @@ require('dotenv').config();
 const TelegramBot = require("node-telegram-bot-api");
 
 const token = process.env.token;
-const webAppUrl = "https://telegram-bot-game.onrender.com/html";
+const webAppUrl = "https://telegram-bot-game.onrender.com/";
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on('mainButtonClicked', async (msg) => {
