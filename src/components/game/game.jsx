@@ -1,10 +1,12 @@
-import "game.css"
+import "./game.css"
 
 const Game = ()=>{
+    const {ononToggleButtonTo} = require("../../hooks/useTg");
     return(
         <div>
-            Game
-            <a href="/"></a>
+            <p>Game</p>
+            <a href="/">lobby</a>
+            <button onclick={ononToggleButtonTo} className="button">active</button>
         </div>
     )
 }

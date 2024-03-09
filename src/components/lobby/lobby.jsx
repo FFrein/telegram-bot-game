@@ -1,12 +1,11 @@
-import "lobby.css"
+import "./lobby.css"
 
 const Lobby = ()=>{
 
-    cosnt 
     return(
         <div>
-            Lobby
-            <a href="game"></a>
+            <p>Lobby</p>
+            <a href="game">game</a>
         </div>
     )
 }

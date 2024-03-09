@@ -1,9 +1,9 @@
-import './app.css';
 import Game from './components/game/game';
 import Lobby from './components/lobby/lobby';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
+
   return (
     <div className="App">
       <Routes>
