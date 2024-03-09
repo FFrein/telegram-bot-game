@@ -100,6 +100,20 @@
             userid.innerText = `${tg.initDataUnsafe.user.id}`; //показываем user_id
             usercard.appendChild(userid); //добавляем
         }
+    
+        function test2(){
+            let tg = window.Telegram.WebApp;
+            tg.WebApp.MainButton.show();
+            tg.WebApp.MainButton.enable();
+        }
+
+        function test3(){
+            let tg2 = window.Telegram.WebApp;
+            tg2.sendData("test data");
+        }
+
+        window.Telegram.WebApp.onEvent('mainButtonClicked', ()=>{tg.sendData("test data");})
+        Telegram.WebApp.onEvent('mainButtonClicked', ()=>{tg.sendData("test data");})
     </script>
 </head>
 <body>
