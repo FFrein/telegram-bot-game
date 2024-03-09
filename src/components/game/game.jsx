@@ -1,7 +1,13 @@
 import "./game.css"
 
 const Game = ()=>{
-    const {ononToggleButtonTo} = require("../../hooks/useTg");
+
+    const {tg, ononToggleButtonTo} = require("../../hooks/useTg");
+    
+    tg.onEvent('mainButtonClicked', function(){
+        tg.sendData("some string that we need to send"); 
+    });
+    
     return(
         <div>
             <p>Game</p>
