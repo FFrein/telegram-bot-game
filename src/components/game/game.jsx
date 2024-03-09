@@ -12,7 +12,7 @@ const Game = ()=>{
         });
     });
 
-    function test2(){
+    const test2 = ()=>{
         let tg3 = window.Telegram.WebApp;
         tg3.MainButton.show();
         tg3.MainButton.enable();
@@ -21,7 +21,8 @@ const Game = ()=>{
         });
     }
 
-    function test3(){
+    const test3 = ()=>{
+        alert("test3");
         let tg2 = window.Telegram.WebApp;
         tg2.sendData("test data");
     }
@@ -30,9 +31,9 @@ const Game = ()=>{
         <div>
             <p>Game</p>
             <a href="/">lobby</a>
-            <button onclick={onToggleButton} className="button">active</button>
-            <button onclick={test2} className="button">active2</button>
-            <button onclick={test3} className="button">active3</button>
+            <button onClick={onToggleButton} className="button">active</button>
+            <button onClick={test2} className="button">active2</button>
+            <button onClick={test3} className="button">active3</button>
         </div>
     )
 }
