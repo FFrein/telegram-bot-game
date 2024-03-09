@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "build": "echo 'Add your build command here'",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
