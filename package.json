@@ -16,8 +16,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run star-react\" \"npm run start-bot\"",
-    "star-react": "react-scripts start",
+    "start": "concurrently \"npm run start-react\" \"npm run start-bot\"",
+    "start-react": "react-scripts start",
     "start-bot": "node ./src/bot.js",
     "build": "react-scripts build",
     "test": "react-scripts test",

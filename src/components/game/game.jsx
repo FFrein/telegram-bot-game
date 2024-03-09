@@ -31,8 +31,8 @@ const Game = ()=>{
             <p>Game</p>
             <a href="/">lobby</a>
             <button onclick={onToggleButton} className="button">active</button>
-            <button onclick={test2()} className="button">active2</button>
-            <button onclick={test3()} className="button">active3</button>
+            <button onclick={test2} className="button">active2</button>
+            <button onclick={test3} className="button">active3</button>
         </div>
     )
 }
