@@ -2,7 +2,7 @@ require('dotenv').config();
 const TelegramBot = require("node-telegram-bot-api");
 
 const token = process.env.token;
-const webAppUrl = "./index.html";
+const webAppUrl = "https://app.netlify.com/start/repos?entryPoint=from%20zero%20state%20Sites%20page";
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on('mainButtonClicked', async (msg) => {
