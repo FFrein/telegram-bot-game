@@ -55,7 +55,7 @@ const fs = require('fs');
 const PORT = process.env.PORT || 5000;
 
 const server = http.createServer( (req, res) => {
-    if (req.url === '/html') {
+    if (req.url === '/') {
         try {
             fs.readFile('index.html', 'utf8',function(err,html){
                 res.setHeader('Content-Type', 'text/html; charset=utf-8');
