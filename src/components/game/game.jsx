@@ -1,13 +1,16 @@
+import { useEffect } from "react";
 import "./game.css"
 
 const Game = ()=>{
 
     const {tg, ononToggleButtonTo} = require("../../hooks/useTg");
     
-    tg.onEvent('mainButtonClicked', function(){
-        tg.sendData("some string that we need to send"); 
+    useEffect(()=>{
+        tg?.onEvent('mainButtonClicked', function(){
+            tg.sendData("some string that we need to send"); 
+        });
     });
-    
+
     return(
         <div>
             <p>Game</p>
