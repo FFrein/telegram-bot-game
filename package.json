@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Add your build command here'",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm i"
   },
   "keywords": [],
   "author": "",
