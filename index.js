@@ -7,17 +7,18 @@ const bot = new TelegramBot(token, { polling: true });
 
 bot.on('mainButtonClicked', async (msg) => {
     const chatId = msg.chat.id;
-    console.log("mainButtonClicked");
+    console.log("mainButtonClicked2");
 
     // Отправка ответа в чат
-    await bot.sendMessage(chatId, 'Спасибо за нажатие кнопки!');
+    await bot.sendMessage(chatId, 'mainButtonClicked Спасибо за нажатие кнопки!');
   });
 
 bot.on('web_app_data', async (msg) => {
     const chatId = msg.chat.id;
-    console.log("mainButtonClicked");
+    console.log("mainButtonClicked3");
 
     // Отправка ответа в чат
+    await bot.sendMessage(chatId, 'web_app_data Спасибо за нажатие кнопки!');
 });
 
 bot.on('message', async (msg) => {
@@ -28,7 +29,7 @@ bot.on('message', async (msg) => {
 
     if(msg?.web_app_data){
         try{
-            bot.sendMessage(chatId, "ход обработан");
+            bot.sendMessage(chatId, "message ход обработан");
             console.log("ход обработан");
         }catch(e){
             console.log(e);
