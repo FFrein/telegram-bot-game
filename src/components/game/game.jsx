@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import "./game.css"
+import {useTg} from "../../hooks/useTg"
 
 const Game = ()=>{
 
-    const {tg, ononToggleButtonTo} = require("../../hooks/useTg");
+    const {tg, onToggleButton} = useTg();
     
     useEffect(()=>{
-        tg?.onEvent('mainButtonClicked', function(){
-            tg.sendData("some string that we need to send"); 
+        tg?.WebApp?.onEvent('mainButtonClicked', function(){
+            tg.WebApp.sendData("some string that we need to send"); 
         });
     });
 
@@ -15,7 +16,7 @@ const Game = ()=>{
         <div>
             <p>Game</p>
             <a href="/">lobby</a>
-            <button onclick={ononToggleButtonTo} className="button">active</button>
+            <button onclick={onToggleButton} className="button">active</button>
         </div>
     )
 }
