@@ -49,7 +49,6 @@ bot.on('message', async (msg) => {
     
 });
 
-
 //сайт
 const http = require('http');
 const fs = require('fs');
