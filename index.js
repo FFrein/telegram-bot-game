@@ -2,7 +2,7 @@ require('dotenv').config();
 const TelegramBot = require("node-telegram-bot-api");
 
 const token = process.env.token;
-const webAppUrl = "https://app.netlify.com/start/repos?entryPoint=from%20zero%20state%20Sites%20page";
+const webAppUrl = "https://telegram-bot-game.onrender.com/html";
 const bot = new TelegramBot(token, { polling: true });
 
 bot.on('mainButtonClicked', async (msg) => {
@@ -39,7 +39,7 @@ bot.on('message', async (msg) => {
         await bot.sendMessage(chatId,'ok',{
             reply_markup: {
                 keyboard: [
-                    [{ text: 'Сайт' , web_app: {url:webAppUrl + "game"}}]
+                    [{ text: 'Сайт' , web_app: {url:webAppUrl}}]
                 ]
             }
         });
